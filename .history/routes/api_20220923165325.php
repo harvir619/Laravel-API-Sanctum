@@ -22,7 +22,7 @@ use App\Http\Controllers\ProductController;
 
 
 //Public Routes
-Route::post('/register', [AuthController::class, 'register']);
+Route::post('products',[AuthController::class,'register']);
 Route::get('/products/search/{name}', [ProductController::class, 'search']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::get('/products', [ProductController::class, 'index']);
