@@ -73,12 +73,12 @@ class ProductController extends Controller
     /**
      * Search for a name.
      *
-     * @param  str  $name
+     * @param  str  $id
      * @return \Illuminate\Http\Response
      */
-    public function search($name)
+    public function destroy($id)
     {
 
-        return Product::where('name', 'like', '%' . $name . '%')->get();
+        return Product::destroy($id);
     }
 }

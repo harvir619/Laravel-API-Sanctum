@@ -71,14 +71,14 @@ class ProductController extends Controller
 
 
     /**
-     * Search for a name.
+     * Remove the specified resource from storage.
      *
-     * @param  str  $name
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function search($name)
+    public function destroy($id)
     {
 
-        return Product::where('name', 'like', '%' . $name . '%')->get();
+        return Product::destroy($id);
     }
 }
