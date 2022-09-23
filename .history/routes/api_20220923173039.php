@@ -23,7 +23,6 @@ use App\Http\Controllers\ProductController;
 
 //Public Routes
 Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
 Route::get('/products/search/{name}', [ProductController::class, 'search']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::get('/products', [ProductController::class, 'index']);
@@ -35,7 +34,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::delete('/products/{id}', [ProductController::class, 'destroy']);
     Route::put('/products/{id}', [ProductController::class, 'update']);
 
-
+    Route::post('/logout', [AuthController::class, 'log']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
 
