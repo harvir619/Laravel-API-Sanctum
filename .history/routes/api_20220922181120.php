@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 // Route::post('/products', [ProductController::class, 'store']);
 
-Route::resource('products', ProductController::class);
+R
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
